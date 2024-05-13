@@ -2,30 +2,31 @@ import { StyleSheet } from 'react-native';
 
 import EditScreenInfo from '@/src/components/EditScreenInfo';
 import { Text, View } from '@/src/components/Themed';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 export default function TabOneScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Hello world</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/index.tsx" />
+     <Text style={styles.title}>Pizza Peperoni</Text>
+     <Text style={styles.price}>$12.99</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: Colors.light.background,
   },
   title: {
-    fontSize: 20,
+    fontSize: 18,
+    fontWeight: '600',
+    marginVertical: 10,
+    color: 'black',
+  },
+
+  price : {
+    color: 'darkgreen',
     fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
+  }
+  
 });
