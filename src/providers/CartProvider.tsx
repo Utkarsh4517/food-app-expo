@@ -9,3 +9,5 @@ const CartProvider = ({ children }: any) => {
     </CartContext.Provider>
   );
 };
+
+export default CartProvider;
